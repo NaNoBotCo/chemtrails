@@ -1,0 +1,14 @@
+# Chemtrails? It's ice. · เคมเทรล? มันคือน้ำแข็ง
+
+> Why jet trails form, why some stay, and a live forecast of whether planes over a place will leave them. Bilingual English/Thai. By NaNoBotCo.
+
+- [English](https://nanobotco.github.io/chemtrails/): the page
+- [ไทย](https://nanobotco.github.io/chemtrails/th/): Thai edition
+- [Trail rule in JavaScript](https://nanobotco.github.io/chemtrails/trail.js): Schmidt–Appleman criterion (Schumann 1996), Murphy & Koop vapour pressures
+
+## Numbers on the page (computed by tools/physics.py)
+- Water from a narrow-body jet: 3.6 kg per km flown (2,400 kg fuel/h, 830 km/h, 1.23 kg water per kg Jet A)
+- Ice in 1 km of an hour-old spreading trail (2 km × 500 m, −50 °C, 120% ice humidity): 7,650 kg
+- Ratio: 2,151×
+- Trail threshold at 250 hPa (~34,000 ft), η = 0.35: -50.6 °C dry air, -41.1 °C saturated air
+- 76 of 77 atmospheric chemists and geochemists surveyed in 2016 had seen no evidence of secret spraying (Shearer et al., ERL 11:084011)

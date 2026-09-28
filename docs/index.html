@@ -1,0 +1,378 @@
+<!doctype html><html lang="en" translate="no" class="notranslate"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google" content="notranslate"><meta name="robots" content="notranslate">
+<script>if(/[.]translate[.]goog$/.test(location.hostname))location.replace("https://"+location.hostname.slice(0,-15).replace(/--/g,"~").replace(/-/g,".").replace(/~/g,"-")+location.pathname+location.search.replace(/([?&])_x_tr_[^&]*/g,"$1").replace(/[?&]+$/,"").replace(/[?]&+/,"?")+location.hash)</script>
+<title>Chemtrails? It&#x27;s ice.</title>
+<meta name="description" content="Why jets leave trails, why some stay, and a live check of whether planes over you will leave them right now. Drawn with math, from the physics.">
+<link rel="canonical" href="https://nanobotco.github.io/chemtrails/">
+<link rel="alternate" hreflang="en" href="https://nanobotco.github.io/chemtrails/"><link rel="alternate" hreflang="th" href="https://nanobotco.github.io/chemtrails/th/"><link rel="alternate" hreflang="x-default" href="https://nanobotco.github.io/chemtrails/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="NaNoBotCo">
+<meta property="og:title" content="Chemtrails? It&#x27;s ice."><meta property="og:description" content="Why jets leave trails, why some stay, and a live check of whether planes over you will leave them right now. Drawn with math, from the physics."><meta property="og:url" content="https://nanobotco.github.io/chemtrails/">
+<meta property="og:image" content="https://nanobotco.github.io/chemtrails/card.jpg"><meta property="og:image:secure_url" content="https://nanobotco.github.io/chemtrails/card.jpg"><meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Jets crossing a rose sky, one leaving a long trail, with the words: Chemtrails? It&#x27;s ice.">
+<meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="th_TH">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://nanobotco.github.io/chemtrails/card.jpg">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="alternate" type="text/plain" href="https://nanobotco.github.io/chemtrails/llms.txt" title="llms.txt">
+<link rel="preconnect" href="https://api.open-meteo.com">
+<style>/* bands.css — full-bleed parallax bands.
+ *
+ * Four layers, bottom to top:
+ *   1  the photograph, background-attachment:fixed, so it holds still while the page
+ *      moves over it. This is the whole trick.
+ *   2  ::before, a gradient scrim weighted heaviest where the type sits.
+ *   3  ::after, a flat brand tint on mix-blend-mode:multiply, so a band never fights
+ *      the page it is sitting in.
+ *   4  the type.
+ *
+ * Expects these custom properties from the host page: --ink (the page's darkest),
+ * --accent (the brand colour used in the tint and the kicker), --display (a condensed
+ * or heavy face), --body. Everything else is self-contained.
+ */
+
+.band{
+ position:relative;isolation:isolate;
+ /* full bleed out of a centred column without knowing the column's width */
+ margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);width:100vw;
+ min-height:clamp(260px,52vh,520px);display:grid;align-items:center;
+ background-size:cover;background-position:center;background-repeat:no-repeat;
+ background-attachment:fixed;background-color:#0b0906;
+ border-top:3px solid var(--ink,#111);border-bottom:3px solid var(--ink,#111);
+ margin-block:2.6rem}
+
+.band::before{content:"";position:absolute;inset:0;z-index:-2;
+ background:linear-gradient(180deg,rgba(6,5,4,.80) 0%,rgba(6,5,4,.34) 38%,
+  rgba(6,5,4,.46) 62%,rgba(6,5,4,.86) 100%)}
+
+.band::after{content:"";position:absolute;inset:0;z-index:-1;mix-blend-mode:multiply;
+ background:radial-gradient(120% 90% at 22% 32%,
+   color-mix(in srgb,var(--accent,#e0322b) 20%,transparent),transparent 62%),
+  linear-gradient(90deg,rgba(11,9,6,.55),transparent 55%)}
+
+.band .in{max-width:68rem;margin:0 auto;padding:clamp(2rem,6vw,4.2rem) 1rem;width:100%}
+.band .kicker{display:block;font-family:var(--display,system-ui);font-size:.7rem;
+ font-weight:800;letter-spacing:.34em;text-transform:uppercase;
+ color:color-mix(in srgb,var(--accent,#e0322b) 62%,white);margin-bottom:.7rem}
+.band h2{font-family:var(--display,system-ui);font-size:clamp(1.9rem,6vw,3.5rem);
+ line-height:.98;margin:0 0 .5rem;border:0;color:#fff;text-transform:uppercase;
+ letter-spacing:-.01em;text-shadow:0 2px 26px rgba(0,0,0,.55);max-width:22ch}
+.band p{color:#f2e9dc;font-size:clamp(1rem,2.2vw,1.2rem);max-width:34ch;margin:.3rem 0 0;
+ text-shadow:0 1px 14px rgba(0,0,0,.7)}
+.band .big{font-family:var(--display,system-ui);font-size:clamp(3rem,11vw,7rem);
+ line-height:.86;font-weight:800;color:#fff;margin:0;letter-spacing:-.02em;
+ text-shadow:0 3px 34px rgba(0,0,0,.6)}
+.band .big small{display:block;font-family:var(--body,system-ui);font-size:.16em;
+ letter-spacing:.24em;text-transform:uppercase;font-weight:800;margin-top:.5rem;
+ color:color-mix(in srgb,var(--accent,#e0322b) 62%,white)}
+.band .btn{margin-top:1.3rem}
+
+/* the credit sits on the band, because a borrowed photograph carries its licence */
+.band .cred{position:absolute;right:0;bottom:0;z-index:1;font-size:.6rem;color:#cbbfae;
+ background:rgba(6,5,4,.72);padding:.22rem .5rem;max-width:72%}
+.band .cred a{color:#e4d9c8}
+
+.band.right .in{text-align:right;display:flex;flex-direction:column;align-items:flex-end}
+.band.right::after{background:radial-gradient(120% 90% at 78% 32%,
+  color-mix(in srgb,var(--accent,#e0322b) 20%,transparent),transparent 62%),
+ linear-gradient(270deg,rgba(11,9,6,.55),transparent 55%)}
+.band.tall{min-height:clamp(340px,72vh,680px)}
+.band.short{min-height:clamp(200px,34vh,320px)}
+
+/* background-attachment:fixed is what makes this work and it is also the property mobile
+   Safari has never handled, and it repaints on every scroll frame. Off for coarse
+   pointers and for reduced motion; it degrades to a plain cover image, which is fine. */
+@media (pointer:coarse),(prefers-reduced-motion:reduce){.band{background-attachment:scroll}}
+@media print{.band{display:none}}
+
+:root{
+ --bg:#FBF3E4;--panel:#fff;--ink:#231A2A;--mute:#6A5A66;--line:#EBD9BC;
+ --rose:#C9485A;--rose2:#EE9496;--wine:#7A1A2C;--ind:#283A6E;--ind2:#1E2C57;--gold:#D6A42C;--red:#B23A2E;--cream:#F6EBD6;
+ --accent:#C9485A;--shadow:rgba(40,20,40,.14);
+ --display:"Avenir Next",Avenir,"Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;
+ --body:"Avenir Next",Avenir,"Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;
+ --thai:"Sukhumvit Set","Noto Sans Thai","Leelawadee UI",Thonburi,Tahoma,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --bg:#141A30;--panel:#1E2745;--ink:#F6EBD6;--mute:#C4B8C8;--line:#2F3A62;--accent:#EE9496;--wine:#F4B3B0;--shadow:rgba(0,0,0,.5)}}
+:root[data-theme="dark"]{--bg:#141A30;--panel:#1E2745;--ink:#F6EBD6;--mute:#C4B8C8;--line:#2F3A62;--accent:#EE9496;--wine:#F4B3B0;--shadow:rgba(0,0,0,.5)}
+*{box-sizing:border-box}
+html{font-size:18px;scroll-behavior:smooth;scroll-padding-top:3.5rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6;-webkit-text-size-adjust:100%;overflow-x:hidden}
+:lang(th),.th{font-family:var(--thai);line-height:1.8}
+a{color:var(--accent);text-underline-offset:.18em}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+img{max-width:100%;height:auto;display:block}
+.mute{color:var(--mute)}.small{font-size:.86rem}
+
+header.top{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:3px solid var(--gold);transition:transform .26s cubic-bezier(.4,0,.2,1),box-shadow .26s}
+body.nav-away header.top{transform:translateY(-102%)}
+body.nav-tight header.top{box-shadow:0 10px 24px -14px var(--shadow)}
+header.top nav,header.top .langsw{transition:opacity .18s,max-height .26s,margin .26s}
+body.nav-tight header.top nav,body.nav-tight header.top .langsw{opacity:0;max-height:0;margin-block:0;overflow:hidden;pointer-events:none}
+header.top .in{max-width:68rem;margin:0 auto;padding:.5rem 1rem;display:flex;gap:.4rem 1rem;align-items:center;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:700;font-size:1.15rem;text-decoration:none;color:var(--ink);white-space:nowrap}
+.brand b{color:var(--gold)}
+header.top nav{display:flex;gap:.1rem .8rem;flex-wrap:wrap;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+:lang(th) header.top nav{text-transform:none;letter-spacing:0;font-size:.85rem}
+header.top nav a{text-decoration:none;color:var(--mute)}
+header.top nav a:hover{color:var(--ink);box-shadow:inset 0 -3px 0 var(--rose)}
+.langsw{margin-left:auto;font-size:.76rem;font-weight:700;letter-spacing:.08em}
+.langsw a{text-decoration:none;padding:.18rem .5rem;border:2px solid var(--line);border-radius:99px;color:var(--mute)}
+.langsw a[aria-current]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+.tinchok{height:46px;background:url(img/tinchok.svg) repeat-x;background-size:64px 46px}
+:lang(th) .tinchok{background-image:url(../img/tinchok.svg)}
+
+.hero{position:relative;min-height:min(94vh,900px);display:grid;align-items:end;color:var(--cream);background-size:cover;background-position:center bottom;background-color:#C9485A;isolation:isolate;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero .in{max-width:68rem;margin:0 auto;width:100%;padding:3rem 1rem 2.6rem}
+.kicker{display:block;font-family:var(--display);font-size:.74rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);margin-bottom:.4rem}
+:lang(th) .kicker{letter-spacing:.02em;text-transform:none;font-size:.9rem}
+.hero .kicker{color:#FFE3A3}
+.hero h1{font-family:var(--display);font-weight:600;font-size:clamp(3.2rem,12vw,7.4rem);line-height:.92;margin:0;letter-spacing:.01em;text-shadow:0 4px 30px rgba(122,26,44,.35)}
+:lang(th) .hero h1{font-family:var(--thai);font-size:clamp(2.6rem,10vw,6rem);line-height:1.15}
+.hero .lede{max-width:33rem;color:#FFF4E6;text-shadow:0 1px 12px rgba(90,10,30,.5)}
+.cast{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.4rem}
+.cast .say{max-width:22rem}
+.say{display:flex;gap:.7rem;align-items:flex-start}
+.say img{width:64px;height:64px;flex:none;border-radius:50%;box-shadow:0 0 0 3px var(--gold),0 6px 18px rgba(0,0,0,.2)}
+.say p{margin:0;background:var(--cream);color:#231A2A;border-radius:18px;border-top-left-radius:4px;padding:.55rem .9rem;font-size:.95rem;box-shadow:0 4px 0 rgba(122,26,44,.25);position:relative}
+.say p b{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose)}
+:lang(th) .say p b{letter-spacing:0;text-transform:none;font-size:.85rem}
+.say.beer p b{color:var(--ind)}
+.say.beer p{background:#E9EEFB}
+
+.btn{display:inline-block;font-family:var(--display);font-weight:700;letter-spacing:.06em;font-size:.88rem;padding:.6rem 1.15rem;border-radius:99px;background:var(--gold);color:#231A2A;text-decoration:none;margin:.2rem .3rem .2rem 0;border:0;cursor:pointer;box-shadow:0 4px 0 #9C7412}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.ghost.light{color:var(--cream)}
+@media (prefers-reduced-motion:no-preference){.btn{transition:transform .18s cubic-bezier(.34,1.56,.64,1)}.btn:hover{transform:translateY(-2px) scale(1.04)}.btn:active{transform:translateY(2px)}}
+
+.night{background-color:var(--ind2);background-size:cover;background-position:center bottom;color:var(--cream);padding:2.6rem 0 3rem}
+.night .wrap{max-width:68rem;margin:0 auto;padding:0 1rem}
+.night .kicker{color:#FFE3A3}
+.night h2,.night h3{color:var(--cream);border-color:var(--gold)}
+.night a{color:#FFE3A3}
+.live-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:1.6rem;align-items:start}
+@media (max-width:820px){.live-grid{grid-template-columns:1fr}}
+.lv-head{font-size:1.1rem;margin:.4rem 0 .2rem}
+.verdict{font-family:var(--display);font-weight:700;font-size:clamp(1.7rem,4.6vw,2.6rem);line-height:1.08;margin:.2rem 0 .5rem;padding:.35rem .9rem;border-radius:14px;display:inline-block}
+:lang(th) .verdict{font-family:var(--thai);line-height:1.35}
+.verdict:empty{display:none}
+.verdict.long{background:var(--cream);color:var(--wine)}
+.verdict.short{background:var(--rose2);color:#3A0A18}
+.verdict.none{background:#3B4E86;color:var(--cream)}
+.levels{list-style:none;display:flex;gap:.5rem;padding:0;margin:.8rem 0;flex-wrap:wrap}
+.levels li{border-radius:12px;padding:.4rem .7rem;min-width:7.2rem;background:#3B4E86}
+.levels li.long{background:var(--cream);color:var(--wine)}.levels li.short{background:var(--rose2);color:#3A0A18}
+.levels b{display:block;font-size:.95rem}.levels span{display:block;font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem}
+:lang(th) .levels span{text-transform:none;letter-spacing:0;font-size:.85rem}
+.levels small{opacity:.85}
+.next{font-weight:700;color:#FFE3A3}
+.here{font:700 .78rem var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--cream);background:rgba(255,255,255,.08);border:2px solid rgba(246,235,214,.6);border-radius:99px;padding:.45rem .95rem;cursor:pointer}
+:lang(th) .here{font-family:var(--thai);text-transform:none;letter-spacing:0;font-size:.9rem}
+.here[hidden]{display:none}
+.mapcol canvas{width:100%;max-width:480px;aspect-ratio:1;display:block;margin:0 auto;border-radius:50%;box-shadow:0 0 0 4px var(--gold),0 0 0 10px rgba(214,164,44,.25)}
+.bear{display:block;margin:.9rem auto 0;max-width:480px;font-weight:700}
+.bear b{color:#FFE3A3;margin-left:.3rem}
+input[type=range]{width:100%;accent-color:var(--gold);height:2rem}
+.strip{overflow-x:auto;padding-bottom:.4rem}
+.strip .row{display:grid;grid-template-columns:4.2rem 1fr;align-items:center;gap:.4rem;min-width:620px}
+.strip .row>b{font-size:.78rem;text-align:right}
+.strip .cells{display:grid;grid-template-columns:repeat(48,1fr);gap:2px}
+.strip .cells i{height:1.3rem;border-radius:3px;background:#3B4E86}
+.strip .cells i.long{background:var(--cream)}.strip .cells i.short{background:var(--rose2)}
+.strip .cells i.now{outline:2px solid var(--gold);outline-offset:1px}
+.strip .ticks .cells i{background:none;height:auto;font-size:.62rem;font-style:normal;white-space:nowrap;overflow:visible;opacity:.8}
+.legend i{display:inline-block;width:.9rem;height:.9rem;border-radius:3px;vertical-align:-2px;margin:0 .25rem 0 .6rem;background:#3B4E86;border:1px solid rgba(246,235,214,.4)}
+.legend i.long{background:var(--cream)}.legend i.short{background:var(--rose2)}
+.planes ul{list-style:none;padding:0;columns:2 18rem;margin:.4rem 0}
+.planes li{padding:.2rem 0;break-inside:avoid}
+.chip{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;border-radius:99px;padding:.05rem .45rem;background:#3B4E86}
+.chip.long{background:var(--cream);color:var(--wine)}.chip.short{background:var(--rose2);color:#3A0A18}
+.night iframe{width:100%;height:min(70vh,520px);border:0;border-radius:16px;margin:.8rem 0;box-shadow:0 0 0 4px var(--gold)}
+
+main{max-width:68rem;margin:0 auto;padding:1rem 1rem 3rem}
+h2{font-family:var(--display);font-size:clamp(1.7rem,4.6vw,2.6rem);line-height:1.05;margin:2.8rem 0 .8rem;font-weight:700;border-bottom:3px solid var(--gold);padding-bottom:.3rem}
+h3{font-family:var(--display);font-size:1.2rem;margin:1.6rem 0 .4rem;font-weight:700}
+:lang(th) h2,:lang(th) h3,:lang(th) .band h2{font-family:var(--thai);line-height:1.3}
+section>.kicker+h2{margin-top:.1rem}
+section>.kicker{margin-top:2.8rem}
+p{margin:.6rem 0;max-width:44rem}
+.lede{font-size:clamp(1.05rem,2.3vw,1.25rem)}
+
+.rc{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:1.4rem;background:var(--panel);border:3px solid var(--ind);border-radius:22px;padding:1.2rem;box-shadow:0 6px 0 var(--ind)}
+@media (max-width:820px){.rc{grid-template-columns:1fr}}
+.rc label{display:block;font-weight:700;margin-bottom:.4rem}
+.rc label b{float:right;color:var(--rose)}
+.rc .verdict.long{background:var(--ind);color:var(--cream)}
+.rc-view canvas{width:100%;display:block;border-radius:14px}
+.rc-view canvas+canvas{margin-top:.8rem}
+.read{margin-top:1.2rem}
+.eq{font-family:"Iowan Old Style",Georgia,serif;font-size:clamp(1.2rem,3.4vw,1.7rem);background:var(--ind);color:var(--cream);display:inline-block;padding:.5rem 1.1rem;border-radius:12px;max-width:none}
+
+.engines{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:1.4rem;align-items:center;margin:2.4rem 0}
+.engines img{border-radius:18px}
+.engines h2{margin-top:0}
+@media (max-width:820px){.engines{grid-template-columns:1fr}}
+
+.slab{display:grid;grid-template-columns:repeat(4,1fr);border:3px solid var(--ind);border-radius:18px;overflow:hidden;margin:1.2rem 0;background:var(--panel)}
+.slab div{padding:.8rem .9rem;border-right:3px solid var(--ind)}
+.slab div:last-child{border-right:0}
+.slab b{display:block;font-family:var(--display);font-size:clamp(1.5rem,4vw,2.3rem);line-height:1;font-weight:700;color:var(--rose)}
+.slab span{display:block;font-size:.8rem;color:var(--mute);margin-top:.3rem}
+@media (max-width:760px){.slab{grid-template-columns:repeat(2,1fr)}.slab div:nth-child(2n){border-right:0}.slab div:nth-child(-n+2){border-bottom:3px solid var(--ind)}}
+.art{border-radius:18px;margin:1rem 0;width:100%;max-width:760px}
+.art.wide{max-width:none}
+
+.qas{display:grid;gap:1.2rem;margin-top:1rem}
+.qa{display:grid;gap:.5rem}
+.qa .beer{margin-left:clamp(1rem,8vw,5rem)}
+.qa .say p{max-width:40rem}
+
+.send{text-align:center;background:var(--rose);color:var(--cream);border-radius:26px;padding:1.6rem 1rem 2rem;margin:2.6rem 0;box-shadow:0 6px 0 var(--wine)}
+.send h2{border:0;margin:.2rem 0;color:var(--cream)}
+.send .url{font-family:var(--display);font-size:clamp(1.2rem,4.4vw,2.2rem);font-weight:700;max-width:none;margin:.4rem 0 1rem;word-break:break-word}
+.send .url a{color:#fff}
+.src{columns:2 20rem;padding-left:1.1rem;font-size:.9rem}
+.src li{margin-bottom:.35rem;break-inside:avoid}
+.band .kicker{color:#FFE3A3}
+footer.bot .in{max-width:68rem;margin:0 auto;padding:1.4rem 1rem 3rem;font-size:.82rem;color:var(--mute)}
+footer.bot a{color:var(--mute)}
+@media print{.hero canvas,header.top,.tinchok{display:none}}
+</style>
+</head><body>
+<header class="top"><div class="in">
+<a class="brand" href="">It&#x27;s ice <b>✦</b></a>
+<nav aria-label="Sections"><a href="#live">Your sky</a><a href="#recipe">Make a trail</a><a href="#weight">Weight</a><a href="#patterns">Patterns</a><a href="#questions">Questions</a><a href="#sources">Sources</a></nav>
+<span class="langsw"><a href="" hreflang="en" lang="en" aria-current="page">EN</a> <a href="th/" hreflang="th" lang="th">ไทย</a></span>
+</div></header>
+
+<section class="hero" style="background-image:url(img/hero-bg.svg)">
+<canvas id="hero-sky" aria-hidden="true"></canvas>
+<div class="in">
+<span class="kicker">Chemtrails, drawn with math</span>
+<h1>It&#x27;s ice.</h1>
+<p class="lede">A jet burns kerosene and breathes out water. Eleven kilometres up, where the air is colder than a freezer, that water turns to ice in a line behind the plane. Whether the line stays or melts away is up to the sky, and the sky can be forecast.</p>
+<p><a class="btn" href="#live">Check your sky</a> <a class="btn ghost" href="#recipe">Make a trail</a></p>
+<div class="cast"><div class="say nan"><img src="img/nan.svg" alt="" width="64" height="64"><p><b>NaN</b>Same planes, same fuel, different sky.</p></div><div class="say beer"><img src="img/beer.svg" alt="" width="64" height="64"><p><b>Beer</b>It&#x27;s physics. The math is right here.</p></div></div>
+</div>
+</section>
+<div class="tinchok" aria-hidden="true"></div>
+
+<section id="live" class="night" style="background-image:url(img/night-bg.svg)">
+<div class="wrap">
+<span class="kicker">Live · forecast by the hour</span>
+<h2>Your sky, now</h2>
+<div class="live-grid">
+<div>
+<p class="lv-head" id="lv-head">Reading the sky…</p>
+<p class="verdict" id="lv-verdict" aria-live="polite"></p>
+<p id="lv-why" class="small"></p>
+<ul class="levels" id="lv-levels"></ul>
+<p id="lv-wind"></p>
+<p id="lv-next" class="next"></p>
+<button type="button" class="here" id="lv-here">Use my location</button>
+</div>
+<div class="mapcol">
+<canvas id="lv-map" aria-label="Map, north up, 150 km around you, with a trail you can turn and the wind that moves it"></canvas>
+<label class="bear">Turn the trail <b id="lv-bear-val"></b><input id="lv-bear" type="range" min="0" max="179" value="45"></label>
+<p id="lv-bear-out" class="small"></p>
+</div>
+</div>
+<h3>The next 48 hours</h3>
+<p class="small legend"><i class="long"></i>long trails <i class="short"></i>short trails <i class="none"></i>no trails · rows are feet above sea level, columns are hours</p>
+<div id="lv-strip" class="strip"></div>
+<h3>Planes near you</h3>
+<div id="lv-planes" class="planes small">Asking the plane feeds…</div>
+<button type="button" class="btn ghost light" id="lv-radar">Open the live plane map</button>
+<p class="small mute">Forecast: ECMWF through Open-Meteo. Humidity 11 km up is among the hardest numbers in weather to forecast. In 2023 American Airlines pilots steered around trail-making air using forecasts like this one and made 54% fewer trails, by distance.</p>
+</div>
+</section>
+<div class="tinchok" aria-hidden="true"></div>
+
+<main>
+<section id="recipe">
+<span class="kicker">Try it</span>
+<h2>Make a trail</h2>
+<p class="lede">Three things decide it: how cold the air is, how wet it is, and how much heat the engine throws away. Move them.</p>
+<div class="rc">
+<div class="rc-ctl">
+<label>Air temperature <b id="rc-t-out"></b><input id="rc-t" type="range" min="-70" max="-25" step="0.5" value="-52"></label>
+<label>Ice humidity <b id="rc-h-out"></b><input id="rc-h" type="range" min="0" max="150" value="115"></label>
+<label>Height <b id="rc-p-out"></b><input id="rc-p" type="range" min="200" max="300" step="50" value="250"></label>
+<label>Engine <b id="rc-e-out"></b><input id="rc-e" type="range" min="0.2" max="0.4" step="0.1" value="0.3"></label>
+<p class="verdict" id="rc-verdict" aria-live="polite"></p>
+<p id="rc-why" class="small"></p>
+</div>
+<div class="rc-view">
+<canvas id="rc-scene" aria-hidden="true"></canvas>
+<canvas id="rc-chart" aria-label="Water vapour against temperature: the water and ice curves, your air, and the exhaust&#x27;s mixing line"></canvas>
+</div>
+</div>
+<div class="read">
+<p><b>Reading the chart.</b> The gold curve is soaked air, measured against water. The pink dashes are soaked air measured against ice, which fills up sooner. Exhaust leaves the engine hot and wet, far up and to the right, and mixes into your air along the straight line. If the line pokes above the gold curve, droplets form and freeze at once: a trail. If your dot sits above the pink dashes, the ice has no reason to leave: the trail stays.</p>
+<p class="eq">G = EI · c<sub>p</sub> · p ⁄ ( ε · Q · (1 − η) )</p>
+<p>Reading it: G is how steep the straight line is. EI is 1.23 kg of water per kg of fuel. cp is the heat it takes to warm air. p is the air pressure at the plane&#x27;s height. ε is 0.622, how light water vapour is next to air. Q is the heat in a kilogram of fuel. η is the share of that heat that pushes the plane. At 34,000 ft this gives trails below -50.6 °C in bone-dry air and below -41.1 °C in soaked air.</p>
+</div>
+</section>
+
+<section class="band right" style="background-image:url(img/three.jpg)"><div class="in"><span class="kicker">One sky, three trails</span><h2>Three planes, three heights</h2><p>Each line is a plane at a different height, in its own layer of air.</p></div><span class="cred"><a href="https://commons.wikimedia.org/wiki/File:Contrails_(Condensation_Trail).jpg">Iamdev37</a> · CC BY-SA 4.0</span></section>
+
+<section id="engines" class="engines">
+<img src="img/engines.svg" alt="Two jets side by side at one height: the upper one leaves a trail, the lower one none" width="1200" height="520" loading="lazy">
+<div>
+<span class="kicker">A test flight, 2000</span>
+<h2>The better engine makes the trail</h2>
+<p>German researchers flew an Airbus A340 and a Boeing 707 wing by wing, at the same height, in the same air, and watched from a third plane. The A340, with its more efficient engines, left a trail. The 707 left none. An engine that turns more of its heat into push sends out cooler exhaust with the same water in it, so it reaches saturation sooner.</p>
+</div>
+</section>
+
+<section id="weight">
+<span class="kicker">Weigh it</span>
+<h2>Could a plane carry it?</h2>
+<div class="slab"><div><b>3.6 kg</b><span>water out of the engines, per km</span></div><div><b>7,650 kg</b><span>ice in that km an hour later</span></div><div><b>×2,151</b><span>came out of the sky</span></div><div><b>2.6 km</b><span>of trail a full 20 t payload could fill</span></div></div>
+<img class="art" src="img/weight.svg" alt="Two squares with areas in proportion: 7,650 kg of ice against 3.6 kg of engine water" width="760" height="420" loading="lazy">
+<p>A narrow-body jet burns about 2,400 kg of fuel an hour and makes 3.6 kg of water for every kilometre it flies. An hour later, a spreading trail can be 2 km wide and 500 m deep. At −50 °C with the air 20% past ice saturation, each cubic metre gives up about 8 milligrams of ice to the crystals the plane left behind. Multiply: 7,650 kg of ice in that kilometre. The engines supplied 3.6 kg. The sky supplied the rest.</p>
+<p>A tank could not do this. An airliner&#x27;s whole payload, about 20 tonnes, would fill 2.6 km of that trail. The IPCC put it plainly in 1999: a new trail&#x27;s ice grows to exceed the plane&#x27;s water “by more than two orders of magnitude”.</p>
+</section>
+
+<section class="band " style="background-image:url(img/spread.jpg)"><div class="in"><span class="kicker">Manchester, 2008</span><h2>Old trails, spreading</h2><p>Hours-old trails fan out into thin cloud. The air was already holding more water than ice can stand.</p></div><span class="cred"><a href="https://commons.wikimedia.org/wiki/File:Aa_oldcontrails01.jpg">Anthony Appleyard</a> · public domain</span></section>
+
+<section id="patterns">
+<span class="kicker">Bearings</span>
+<h2>Grids, X&#x27;s and stripes</h2>
+<img class="art wide" src="img/grid.svg" alt="Three air routes crossing, each trail older, wider and further downwind than the one after it" width="1600" height="900" loading="lazy">
+<p class="lede">A trail points the way the plane was going. You can read its bearing off the sky.</p>
+<p>Airliners fly set highways in the sky, called jet routes, between 18,000 and 45,000 ft. Two routes crossing make an X. One busy route makes parallel stripes a few minutes apart. The wind pushes every stripe sideways, and each stripe is a different age, so each has moved a different distance: the oldest is widest and furthest downwind. A criss-cross sky is a day when the air is wet enough to keep every trail. The picture above is drawn from that rule alone: three routes, a plane every half hour or so on each, a steady wind.</p>
+</section>
+
+<section class="band right" style="background-image:url(img/satellite.jpg)"><div class="in"><span class="kicker">From space, 15 Feb 2013</span><h2>The whole sky&#x27;s worth</h2><p>Trails over Spain and Portugal from NASA&#x27;s Terra satellite: the jet routes, drawn in ice.</p></div><span class="cred"><a href="https://commons.wikimedia.org/wiki/File:Criss-Crossing_Contrails_(8495592530).jpg">NASA Goddard / MODIS</a> · public domain</span></section>
+<section class="band tall" style="background-image:url(img/b17.jpg)"><div class="in"><span class="kicker">27 September 1943</span><h2>Trails before jets</h2><p>B-17s of the 390th Bomb Group over Europe, their fighter escorts looping trails above them. Piston engines breathe out water too.</p></div><span class="cred"><a href="https://commons.wikimedia.org/wiki/File:Boeing_B-17F_Flying_Fortresses_in_flight_with_contrails.jpg">Sgt. Stanley M. Smith, USAAF · Smithsonian NASM</a> · public domain</span></section>
+
+<section id="questions">
+<span class="kicker">NaN asks, Beer answers</span>
+<h2>Questions</h2>
+<div class="qas"><div class="qa"><div class="say nan"><img src="img/nan.svg" alt="" width="64" height="64"><p><b>NaN</b>Why does one plane leave a long trail and the next plane none?</p></div><div class="say beer"><img src="img/beer.svg" alt="" width="64" height="64"><p><b>Beer</b>They are at different heights, and wet air comes in layers. The panel above shows three heights; they often disagree. The engine matters too: see below.</p></div></div><div class="qa"><div class="say nan"><img src="img/nan.svg" alt="" width="64" height="64"><p><b>NaN</b>They didn&#x27;t use to last this long.</p></div><div class="say beer"><img src="img/beer.svg" alt="" width="64" height="64"><p><b>Beer</b>They did in 1943 (the bombers above). There are more planes now: 153,359 commercial flights on 23 July 2026, a record day. And newer engines make trails in warmer air.</p></div></div><div class="qa"><div class="say nan"><img src="img/nan.svg" alt="" width="64" height="64"><p><b>NaN</b>What about the photos of barrels inside planes?</p></div><div class="say beer"><img src="img/beer.svg" alt="" width="64" height="64"><p><b>Beer</b>Water ballast for test flights. Boeing&#x27;s photo archive labels them so. On the Airbus A350 test plane each barrel holds about 300 kg of water, pumped fore and aft to move the balance point.</p></div></div><div class="qa"><div class="say nan"><img src="img/nan.svg" alt="" width="64" height="64"><p><b>NaN</b>Soil tests found aluminium and barium.</p></div><div class="say beer"><img src="img/beer.svg" alt="" width="64" height="64"><p><b>Beer</b>Aluminium is about 8% of the Earth&#x27;s crust, the most common metal in it. Barium runs about 628 parts per million. Any soil test anywhere finds both.</p></div></div><div class="qa"><div class="say nan"><img src="img/nan.svg" alt="" width="64" height="64"><p><b>NaN</b>There are patents and papers about spraying the sky.</p></div><div class="say beer"><img src="img/beer.svg" alt="" width="64" height="64"><p><b>Beer</b>There are. They are ideas on paper. The designs put the spray near 20 km up, higher than airliners fly, from a plane that has not been built. Harvard&#x27;s one planned balloon test was dropped in March 2024 before it flew.</p></div></div><div class="qa"><div class="say nan"><img src="img/nan.svg" alt="" width="64" height="64"><p><b>NaN</b>The Air Force wrote about owning the weather.</p></div><div class="say beer"><img src="img/beer.svg" alt="" width="64" height="64"><p><b>Beer</b>A 1996 student paper imagining the year 2025. Its front page says it holds fictional scenarios and is not Air Force policy.</p></div></div><div class="qa"><div class="say nan"><img src="img/nan.svg" alt="" width="64" height="64"><p><b>NaN</b>Weather modification is real, isn&#x27;t it?</p></div><div class="say beer"><img src="img/beer.svg" alt="" width="64" height="64"><p><b>Beer</b>Yes. Thailand&#x27;s royal rainmaking has flown since 1969: salt near cloud base, dry ice below it, silver iodide at the tops, up to about 21,500 ft. It seeds clouds that are already there. A trail at 35,000 ft in clear blue sky is something else.</p></div></div><div class="qa"><div class="say nan"><img src="img/nan.svg" alt="" width="64" height="64"><p><b>NaN</b>Who else says so?</p></div><div class="say beer"><img src="img/beer.svg" alt="" width="64" height="64"><p><b>Beer</b>In 2016, 77 atmospheric chemists and geochemists were asked. 76 had seen no evidence of a secret spraying program. In 2025 the US EPA, under an administrator who took the question up, wrote that it knows of no trail ever made on purpose for weather over the US.</p></div></div><div class="qa"><div class="say nan"><img src="img/nan.svg" alt="" width="64" height="64"><p><b>NaN</b>So do trails matter at all?</p></div><div class="say beer"><img src="img/beer.svg" alt="" width="64" height="64"><p><b>Beer</b>They do, for warmth. Trail cloud holds heat in: about 57 of aviation&#x27;s 101 milliwatts per square metre of warming in 2018, more than its carbon dioxide. Airlines now test steering around trail-making air. That is the trail story worth talking about.</p></div></div><div class="qa"><div class="say nan"><img src="img/nan.svg" alt="" width="64" height="64"><p><b>NaN</b>How do I settle it myself?</p></div><div class="say beer"><img src="img/beer.svg" alt="" width="64" height="64"><p><b>Beer</b>Make a prediction. Read the panel at the top, write down &quot;long trails at 3 pm&quot;, then look up at 3 pm. A spraying program would not follow tomorrow&#x27;s humidity forecast.</p></div></div></div>
+</section>
+
+<section class="band short" style="background-image:url(img/wing.jpg)"><div class="in"><span class="kicker">Over the wing</span><h2>Trails from wings</h2><p>Air speeding over a wing drops in pressure and cools, and wet air makes a brief cloud. Gone the moment it leaves the wing.</p></div><span class="cred"><a href="https://commons.wikimedia.org/wiki/File:Condensation_pattern_over_an_airliner_wing_(30987670468).jpg">Andrey Filippov</a> · CC BY 2.0</span></section>
+
+<section class="send">
+<h2>Send this instead of arguing</h2>
+<p class="url"><a href="https://nanobotco.github.io/chemtrails/">nanobotco.github.io/chemtrails</a></p>
+<button type="button" class="btn" id="copy" data-url="https://nanobotco.github.io/chemtrails/">Copy the link</button>
+</section>
+
+<section id="sources">
+<h2>Sources</h2>
+<ul class="src"><li><a href="https://www.schweizerbart.de/papers/metz/detail/5/89525">Schumann 1996, On conditions for contrail formation from aircraft exhausts, Meteorol. Z. 5:4–23</a></li><li><a href="https://doi.org/10.1175/1520-0477-34.1.14">Appleman 1953, The formation of exhaust condensation trails by jet aircraft, BAMS 34:14–20</a></li><li><a href="https://doi.org/10.1256/qj.04.94">Murphy &amp; Koop 2005, vapour pressures of ice and supercooled water, QJRMS 131:1539</a></li><li><a href="https://github.com/contrailcirrus/pycontrails/blob/main/pycontrails/models/sac.py">pycontrails: Schmidt–Appleman code and Jet A constants</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5940853/">Kärcher 2018, Formation and radiative forcing of contrail cirrus, Nature Communications 9:1824</a></li><li><a href="https://www.grida.no/climate/ipcc/aviation/038.htm">IPCC 1999, Aviation and the Global Atmosphere, §3.4</a></li><li><a href="https://arc.aiaa.org/doi/10.2514/2.2715">Schumann, Busen &amp; Plohr 2000, propulsion efficiency and contrail formation, J. Aircraft 37(6)</a></li><li><a href="https://iopscience.iop.org/article/10.1088/1748-9326/11/8/084011">Shearer, West, Caldeira &amp; Davis 2016, expert survey, Environ. Res. Lett. 11:084011</a></li><li><a href="https://www.faa.gov/sites/faa.gov/files/regulations_policies/policy_guidance/envir_policy/contrails.pdf">EPA, FAA, NASA, NOAA 2000, Aircraft Contrails Factsheet</a></li><li><a href="https://www.epa.gov/system/files/documents/2025-07/epa-faa-contrails-factsheet-2025-0718.pdf">EPA, FAA, NOAA 2025, Contrails Fact Sheet</a></li><li><a href="https://www.epa.gov/geoengineering/frequent-questions">EPA, Geoengineering: frequent questions</a></li><li><a href="https://secure.boeingimages.com/archive/747-100-Flight-Test-Ballast-2F3XC5OK63W.html">Boeing Images: 747-100 flight test ballast</a></li><li><a href="https://leadstories.com/hoax-alert/2023/09/fact-check-photo-of-barrels-on-a-plane-shows-ballast-tanks-for-load-testing-no-mystery-what-they-are-for.html">Lead Stories 2023: barrels are ballast tanks (A350)</a></li><li><a href="https://pubs.usgs.gov/sir/2017/5118/elements/Aluminum/Al_txt.html">USGS: aluminium in the crust</a></li><li><a href="https://pubs.usgs.gov/sir/2017/5118/elements/Barium/Ba_txt.html">USGS: barium in the crust</a></li><li><a href="https://iopscience.iop.org/article/10.1088/1748-9326/aae98d">Smith &amp; Wagner 2018, stratospheric aerosol injection tactics and costs, Environ. Res. Lett. 13:124001</a></li><li><a href="https://salatainstitute.harvard.edu/an-update-on-scopex/">Harvard Salata Institute: an update on SCoPEx, March 2024</a></li><li><a href="https://archive.org/download/WeatherAsAForceMultiplier/WeatherAsAForceMultiplier.pdf">House et al. 1996, Weather as a Force Multiplier: Owning the Weather in 2025</a></li><li><a href="https://patents.google.com/patent/EP1491088A1/en">Royal Rainmaking patent EP1491088A1</a></li><li><a href="https://image.mfa.go.th/mfa/0/iyOJNVBddx/The_Royal_Rainmaking_Project_.pdf">Thai MFA: The Royal Rainmaking Project</a></li><li><a href="https://www.royalrain.go.th/">Department of Royal Rainmaking and Agricultural Aviation</a></li><li><a href="https://repository.library.noaa.gov/view/noaa/45026">Lee et al. 2021, aviation&#x27;s contribution to climate forcing, Atmos. Environ. 244:117834</a></li><li><a href="https://news.aa.com/news/news-details/2023/American-Airlines-participates-in-first-of-its-kind-research-on-contrail-avoidance-CORP-OTH-08/default.aspx">American Airlines 2023: contrail-avoidance trial</a></li><li><a href="https://www.airwaysmag.com/new-post/flightradar24-record-commercial-flights-july-2026">Airways Magazine: Flightradar24 record day, July 2026</a></li><li><a href="https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap5_section_3.html">FAA Aeronautical Information Manual 5-3-4: jet routes</a></li><li><a href="https://en.wikipedia.org/wiki/Chemtrail_conspiracy_theory">Wikipedia: Chemtrail conspiracy theory</a></li><li><a href="https://open-meteo.com/">Open-Meteo forecast API (ECMWF IFS), CC BY 4.0</a></li><li><a href="https://adsb.lol/">adsb.lol live planes, ODbL</a></li><li><a href="https://commons.wikimedia.org/">Wikimedia Commons</a></li></ul>
+<p class="mute small">Photographs from Wikimedia Commons, credited on each. Drawings and code: NaNoBotCo. NaN and Beer drawn by NaNoBotCo.</p>
+</section>
+</main>
+<div class="tinchok" aria-hidden="true"></div>
+<footer class="bot"><div class="in">Text and drawings CC BY 4.0, NaNoBotCo. Code MIT. Photographs keep their own licences. Forecast data Open-Meteo, CC BY 4.0. Plane data adsb.lol, ODbL. · <a href="https://github.com/NaNoBotCo/chemtrails">GitHub</a> · <a href="https://nanobotco.github.io/rain-chiang-mai/">Rain in Chiang Mai</a> · <a href="https://nanobotco.github.io/chaos/">Chaos, Drawn</a></div></footer>
+<script src="trail.js"></script><script src="hero.js" defer></script><script src="live.js" defer></script><script src="recipe.js" defer></script><script src="top.js" defer></script>
+<script>document.getElementById("copy").addEventListener("click",function(){var b=this,u=b.dataset.url;(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(function(){b.textContent="Copied"}).catch(function(){prompt("",u)})})</script>
+</body></html>
