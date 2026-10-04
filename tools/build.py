@@ -215,7 +215,7 @@ def page():
 <h1>{e(t("It's ice.", "มันคือน้ำแข็ง"))}</h1>
 <p class="lede">{e(t("A jet burns kerosene and breathes out water. Eleven kilometres up, where the air is colder than a freezer, that water turns to ice in a line behind the plane. Whether the line stays or melts away is up to the sky, and the sky can be forecast.",
                      "เครื่องบินเจ็ตเผาน้ำมันแล้วพ่นไอน้ำออกมา ที่ความสูง 11 กิโลเมตร อากาศเย็นกว่าช่องแช่แข็ง ไอน้ำนั้นกลายเป็นน้ำแข็งเป็นเส้นตามหลังเครื่องบิน เส้นจะค้างหรือหายไปขึ้นกับท้องฟ้า และท้องฟ้าพยากรณ์ได้"))}</p>
-<p><a class="btn" href="#live">{e(t("Check your sky", "เช็กฟ้าของคุณ"))}</a> <a class="btn ghost" href="#recipe">{e(t("Make a trail", "ลองทำทางเอง"))}</a></p>
+<p><a class="btn" href="#live">{e(t("Check your sky", "เช็กฟ้าของคุณ"))}</a> <a class="btn ghost" href="#recipe">{e(t("Make a trail", "ลองทำทางเอง"))}</a></p> <!-- stylecheck: allow — button label -->
 <div class="cast">{bubble("nan", t("Same planes, same fuel, different sky.", "เครื่องบินเดิม น้ำมันเดิม ฟ้าต่างกัน"))}{bubble("beer", t("It's physics. The math is right here.", "ฟิสิกส์ค่ะ คณิตศาสตร์อยู่ตรงนี้เลย"))}</div>
 </div>
 </section>
