@@ -5,6 +5,7 @@
 Numbers in the copy come from tools/physics.py, so the text and the arithmetic agree.
 """
 import html
+import ogcards
 import json
 import os
 import sys
@@ -546,6 +547,8 @@ def main():
         open(out, "w", encoding="utf-8").write(page())
         print("wrote", out)
     extras()
+    ogcards.copy(ROOT, DOCS)
+    ogcards.apply_tree(DOCS, SITE)
 
 
 if __name__ == "__main__":
